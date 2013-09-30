@@ -22,13 +22,16 @@ class Blog extends CI_Controller {
     }
 
     public function index() {
-        echo 'Hallo CI';
+        $data['title'] = 'blog';
+        $this->load->view('templates/header', $data);
+        $this->load->view('blog/index');
+        $this->load->view('templates/footer');
     }
 
-    public function comments(){
+    public function comments() {
         echo 'Look at this!';
     }
-    
+
 }
 
 /* End of file blog.php */
