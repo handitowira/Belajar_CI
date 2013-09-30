@@ -16,8 +16,8 @@ class news_model extends CI_Model {
 
     //put your code here
     public function __construct() {
-        parent::__construct();
-        $this->load->database();
+        parent::__construct(); //construct from parent class(CI_Controller)
+        $this->load->database(); //load database setting from config/database
     }
 
     public function get_news($slug = FALSE) {
