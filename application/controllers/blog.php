@@ -22,9 +22,12 @@ class Blog extends CI_Controller {
     }
 
     public function index() {
-        $data['title'] = 'blog';
+        $data = array(
+            'title' => 'blog',
+            'message' => 'halo every body'
+        );
         $this->load->view('templates/header', $data);
-        $this->load->view('blog/index');
+        $this->load->view('blog/index', $data);
         $this->load->view('templates/footer');
     }
 
