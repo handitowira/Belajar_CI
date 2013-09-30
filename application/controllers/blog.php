@@ -25,6 +25,10 @@ class Blog extends CI_Controller {
         echo 'Hallo CI';
     }
 
+    public function comments(){
+        echo 'Look at this!';
+    }
+    
 }
 
 /* End of file blog.php */
