@@ -46,7 +46,7 @@ class news extends CI_Controller {
     }
 
     public function create() {
-        $this->load->helper('form');
+        $this->load->helper('form, url');
         $this->load->library('form_validation');
 
         $data['title'] = 'Create a news item';
@@ -57,10 +57,11 @@ class news extends CI_Controller {
         if ($this->form_validation->run() === FALSE) {
             $this->load->view('templates/header', $data);
             $this->load->view('news/create');
-            $this->load->view('templates/foter');
+            $this->load->view('templates/footer');
         } else {
             $this->news_model->set_news();
             $this->load->view('news/success');
+            redirect('news', 'index');
         }
     }
 
