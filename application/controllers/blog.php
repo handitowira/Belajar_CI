@@ -22,6 +22,12 @@ class Blog extends CI_Controller {
     }
 
     public function index() {
+        $data['todo_list'] = array(
+            'Clean house',
+            'Call mom',
+            'study hard',
+            'Run'
+        );
         $data['title'] = 'blog';
         $data['message'] = 'hi broo!!';
         $this->load->view('templates/header', $data);
