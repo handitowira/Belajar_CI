@@ -8,3 +8,7 @@ and open the template in the editor.
 <h3>
     <?php echo $message; ?>
 </h3>
+<h4>to do list</h4>
+<?php foreach ($todo_list as $items): ?>
+    <li><?php echo $items; ?></li>
+<?php endforeach; ?>
